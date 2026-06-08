@@ -31,17 +31,17 @@ export default function ComparisonTable() {
 
         <Reveal delay={0.05}>
           <div className="mx-auto mt-14 max-w-5xl overflow-hidden rounded-2xl border border-white/10">
-            <div className="overflow-x-auto">
+            <div className="max-h-[440px] overflow-auto">
               <table className="w-full min-w-[640px] border-collapse text-left">
-                <thead>
-                  <tr className="bg-white/[0.02]">
-                    <th className="px-5 py-5 text-sm font-semibold text-muted-foreground">
+                <thead className="sticky top-0 z-20">
+                  <tr>
+                    <th className="border-b border-white/10 bg-[#0b1320] px-5 py-4 text-sm font-semibold text-muted-foreground">
                       Característica
                     </th>
-                    <th className="px-4 py-5 text-center text-sm font-bold text-white">
+                    <th className="border-b border-white/10 bg-[#0b1320] px-4 py-4 text-center text-sm font-bold text-white">
                       Esencial
                     </th>
-                    <th className="relative px-4 py-5 text-center text-sm font-bold text-white">
+                    <th className="relative border-b border-white/10 bg-[#0e1a30] px-4 py-4 text-center text-sm font-bold text-white">
                       <span className="bg-blue-sheen bg-clip-text text-transparent">
                         Pro
                       </span>
@@ -49,7 +49,7 @@ export default function ComparisonTable() {
                         Popular
                       </span>
                     </th>
-                    <th className="px-4 py-5 text-center text-sm font-bold text-white">
+                    <th className="border-b border-white/10 bg-[#0b1320] px-4 py-4 text-center text-sm font-bold text-white">
                       Premium
                     </th>
                   </tr>
