@@ -7,9 +7,9 @@ import { cn } from "@/lib/utils";
 type Status = "idle" | "submitting" | "success" | "error";
 
 const inputClass =
-  "w-full rounded-lg border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white placeholder:text-muted-foreground/60 outline-none transition-colors focus:border-noix-blue/60 focus:bg-white/[0.05] focus:ring-2 focus:ring-noix-blue/30";
+  "w-full rounded-lg border border-white/10 bg-white/[0.03] px-4 py-2.5 text-sm text-white placeholder:text-muted-foreground/60 outline-none transition-colors focus:border-noix-blue/60 focus:bg-white/[0.05] focus:ring-2 focus:ring-noix-blue/30";
 
-const labelClass = "mb-1.5 block text-xs font-medium text-white/70";
+const labelClass = "mb-1 block text-xs font-medium text-white/70";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -70,7 +70,7 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="glass-strong flex flex-col items-center rounded-2xl p-10 text-center">
+      <div className="glass-strong flex flex-col items-center rounded-2xl p-8 text-center">
         <span className="flex h-14 w-14 items-center justify-center rounded-full bg-noix-blue/15 text-noix-blue">
           <CheckCircle2 className="h-8 w-8" />
         </span>
@@ -93,7 +93,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="glass-strong rounded-2xl p-6 text-left sm:p-8"
+      className="glass-strong rounded-2xl p-5 text-left sm:p-6"
       noValidate
     >
       {/* Honeypot (hidden from users, catches bots) */}
@@ -140,7 +140,7 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <div className="mt-4">
+      <div className="mt-3">
         <label htmlFor="cf-business" className={labelClass}>
           Tu negocio <span className="text-muted-foreground/60">(opcional)</span>
         </label>
@@ -153,7 +153,7 @@ export default function ContactForm() {
         />
       </div>
 
-      <div className="mt-4">
+      <div className="mt-3">
         <label htmlFor="cf-message" className={labelClass}>
           Mensaje *
         </label>
@@ -162,7 +162,7 @@ export default function ContactForm() {
           name="message"
           ref={messageRef}
           required
-          rows={4}
+          rows={3}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder="Cuéntanos qué necesitas y cómo es tu negocio…"
@@ -171,7 +171,7 @@ export default function ContactForm() {
       </div>
 
       {status === "error" && (
-        <p className="mt-4 flex items-start gap-2 text-sm text-red-400">
+        <p className="mt-3 flex items-start gap-2 text-sm text-red-400">
           <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
           {error}
         </p>
@@ -180,7 +180,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-noix-blue px-6 py-3.5 text-sm font-semibold text-white shadow-glow transition-all hover:bg-[#4a9bff] hover:shadow-glow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-noix-night disabled:cursor-not-allowed disabled:opacity-70"
+        className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-noix-blue px-6 py-3 text-sm font-semibold text-white shadow-glow transition-all hover:bg-[#4a9bff] hover:shadow-glow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-noix-night disabled:cursor-not-allowed disabled:opacity-70"
       >
         {status === "submitting" ? (
           <>
@@ -195,7 +195,7 @@ export default function ContactForm() {
         )}
       </button>
 
-      <p className="mt-3 text-center text-xs text-muted-foreground/70">
+      <p className="mt-2.5 text-center text-xs text-muted-foreground/70">
         Al enviar aceptas que te contactemos sobre tu consulta.
       </p>
     </form>

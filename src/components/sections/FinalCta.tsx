@@ -31,7 +31,7 @@ export default function FinalCta() {
             aria-hidden
           />
 
-          <div className="mb-8 text-center">
+          <div className="mb-6 text-center">
             <h2 className="text-balance text-4xl font-black tracking-tightest text-white sm:text-6xl">
               ¿Empezamos?
             </h2>
