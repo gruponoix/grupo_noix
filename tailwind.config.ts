@@ -73,7 +73,7 @@ const config: Config = {
         tightest: "-0.04em",
       },
       backgroundImage: {
-        "noix-night":
+        "noix-radial":
           "radial-gradient(120% 90% at 50% -10%, #13203a 0%, #0a0f1c 55%, #070b14 100%)",
         "blue-sheen":
           "linear-gradient(120deg, #2f8bff 0%, #7cc0ff 50%, #2f8bff 100%)",
