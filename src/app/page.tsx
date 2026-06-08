@@ -1,7 +1,6 @@
 import Navbar from "@/components/ui/Navbar";
 import Hero from "@/components/sections/Hero";
 import Pricing from "@/components/sections/Pricing";
-import ComparisonTable from "@/components/sections/ComparisonTable";
 import SeoBand from "@/components/sections/SeoBand";
 import GetStarted from "@/components/sections/GetStarted";
 import Footer from "@/components/sections/Footer";
@@ -47,7 +46,6 @@ export default function Home() {
       <main>
         <Hero />
         <Pricing />
-        <ComparisonTable />
         <SeoBand />
         <GetStarted />
       </main>

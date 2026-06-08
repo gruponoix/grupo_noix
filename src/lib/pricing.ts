@@ -76,35 +76,6 @@ export const PLANS: Plan[] = [
   },
 ];
 
-/* ── Comparison matrix ─────────────────────────────────────────── */
-export type Cell = boolean | string;
-
-export interface ComparisonRow {
-  feature: string;
-  esencial: Cell;
-  pro: Cell;
-  premium: Cell;
-}
-
-export const COMPARISON: ComparisonRow[] = [
-  { feature: "Secciones de la web", esencial: "Hasta 5", pro: "Hasta 12", premium: "Ilimitadas" },
-  { feature: "Diseño responsive (móvil)", esencial: true, pro: true, premium: true },
-  { feature: "Copywriting que vende", esencial: true, pro: true, premium: true },
-  { feature: "Galería de imágenes", esencial: true, pro: true, premium: true },
-  { feature: "Botón de WhatsApp", esencial: true, pro: true, premium: true },
-  { feature: "Google Maps", esencial: true, pro: true, premium: true },
-  { feature: "Base de datos de clientes", esencial: false, pro: true, premium: true },
-  { feature: "Formularios y captación de correos", esencial: false, pro: true, premium: true },
-  { feature: "Embudos de conversión", esencial: false, pro: true, premium: true },
-  { feature: "Blog editable", esencial: false, pro: true, premium: true },
-  { feature: "Integración redes sociales", esencial: false, pro: true, premium: true },
-  { feature: "Panel de gestión", esencial: false, pro: false, premium: true },
-  { feature: "Reservas y citas", esencial: false, pro: false, premium: true },
-  { feature: "Tienda online + pasarela de pago", esencial: false, pro: false, premium: true },
-  { feature: "Integraciones CRM / email", esencial: false, pro: false, premium: true },
-  { feature: "Soporte prioritario", esencial: false, pro: false, premium: true },
-];
-
 /* ── Hero trust chips ──────────────────────────────────────────── */
 export const HERO_CHIPS = [
   "Carga <2s",

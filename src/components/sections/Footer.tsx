@@ -3,7 +3,6 @@ import Logo from "@/components/ui/Logo";
 
 const NAV = [
   { label: "Planes", href: "#planes" },
-  { label: "Comparativa", href: "#comparativa" },
   { label: "SEO", href: "#seo" },
   { label: "Incluido", href: "#incluido" },
 ];
