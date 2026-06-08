@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import Logo from "@/components/ui/Logo";
 import { cn } from "@/lib/utils";
 
 const LINKS = [
@@ -37,10 +36,23 @@ export default function Navbar() {
       >
         <a
           href="#top"
-          className="flex items-center text-lg"
+          className="flex items-center gap-2.5"
           aria-label="Grupo NOIX — inicio"
         >
-          <Logo />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo-n.png"
+            alt=""
+            className="h-8 w-auto select-none"
+            draggable={false}
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo-noix.png"
+            alt="Grupo NOIX"
+            className="h-6 w-auto select-none"
+            draggable={false}
+          />
         </a>
 
         <ul className="hidden items-center gap-1 md:flex">
