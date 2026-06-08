@@ -3,8 +3,7 @@ import Hero from "@/components/sections/Hero";
 import Pricing from "@/components/sections/Pricing";
 import ComparisonTable from "@/components/sections/ComparisonTable";
 import SeoBand from "@/components/sections/SeoBand";
-import IncludedInAll from "@/components/sections/IncludedInAll";
-import FinalCta from "@/components/sections/FinalCta";
+import GetStarted from "@/components/sections/GetStarted";
 import Footer from "@/components/sections/Footer";
 import { PLANS } from "@/lib/pricing";
 
@@ -50,8 +49,7 @@ export default function Home() {
         <Pricing />
         <ComparisonTable />
         <SeoBand />
-        <IncludedInAll />
-        <FinalCta />
+        <GetStarted />
       </main>
       <Footer />
     </>
