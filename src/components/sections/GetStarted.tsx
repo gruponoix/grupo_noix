@@ -1,15 +1,9 @@
 "use client";
 
-import {
-  Rocket,
-  Globe,
-  ShieldCheck,
-  Wrench,
-  Mail,
-  type LucideIcon,
-} from "lucide-react";
+import { Rocket, Globe, ShieldCheck, Wrench, type LucideIcon } from "lucide-react";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import ContactForm from "@/components/sections/ContactForm";
+import EmailButton from "@/components/ui/EmailButton";
 import { INCLUDED, type IncludedIcon } from "@/lib/pricing";
 
 const ICONS: Record<IncludedIcon, LucideIcon> = {
@@ -98,13 +92,12 @@ export default function GetStarted() {
 
               <ContactForm />
 
-              <a
-                href="mailto:gruponoixx@gmail.com?subject=Quiero%20una%20web%20que%20venda%20%E2%80%94%20Grupo%20NOIX"
+              <EmailButton
+                email="gruponoixx@gmail.com"
+                subject="Quiero una web que venda — Grupo NOIX"
+                label="o escríbenos a gruponoixx@gmail.com"
                 className="mt-4 flex items-center justify-center gap-2 text-sm font-medium text-white/70 transition-colors hover:text-white"
-              >
-                <Mail className="h-4 w-4" />
-                o escríbenos a gruponoixx@gmail.com
-              </a>
+              />
             </div>
           </Reveal>
         </div>

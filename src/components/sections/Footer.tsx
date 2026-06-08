@@ -1,5 +1,5 @@
-import { Mail } from "lucide-react";
 import Logo from "@/components/ui/Logo";
+import EmailButton from "@/components/ui/EmailButton";
 
 const NAV = [
   { label: "Planes", href: "#planes" },
@@ -21,13 +21,11 @@ export default function Footer() {
               </span>{" "}
               Desarrollo web para negocios locales que quieren crecer.
             </p>
-            <a
-              href="mailto:gruponoixx@gmail.com"
+            <EmailButton
+              email="gruponoixx@gmail.com"
+              label="gruponoixx@gmail.com"
               className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-noix-blue-soft transition-colors hover:text-white"
-            >
-              <Mail className="h-4 w-4" />
-              gruponoixx@gmail.com
-            </a>
+            />
           </div>
 
           <div className="md:justify-self-end">
