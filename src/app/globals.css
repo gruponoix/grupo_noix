@@ -2,26 +2,183 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Brand night-blue palette (HSL) */
+    --background: 223 48% 7%; /* #0a0f1c */
+    --foreground: 210 40% 98%;
+
+    --card: 220 44% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 46% 9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 213 100% 59%; /* #2f8bff electric blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 219 38% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 219 34% 14%;
+    --muted-foreground: 215 22% 65%;
+
+    --accent: 213 100% 59%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 218 36% 18%;
+    --input: 218 36% 18%;
+    --ring: 213 100% 59%;
+
+    --radius: 14px;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: auto; /* Lenis drives smooth scroll */
+  }
+
+  body {
+    @apply bg-noix-night text-foreground antialiased;
+    font-feature-settings: "ss01", "cv01", "cv11";
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: hsl(var(--primary) / 0.3);
+    color: #fff;
+  }
+
+  /* Lenis smooth-scroll runtime styles */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #070b14;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(218 36% 22%);
+    border-radius: 999px;
+    border: 2px solid #070b14;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(213 70% 45%);
+  }
+}
+
+@layer components {
+  /* Subtle glassmorphism surface */
+  .glass {
+    background: linear-gradient(
+      180deg,
+      hsl(220 44% 14% / 0.6),
+      hsl(220 44% 9% / 0.55)
+    );
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid hsl(210 60% 90% / 0.08);
+    box-shadow:
+      inset 0 1px 0 hsl(210 100% 100% / 0.05),
+      0 24px 60px -24px hsl(223 60% 2% / 0.9);
+  }
+
+  .glass-strong {
+    background: linear-gradient(
+      180deg,
+      hsl(220 44% 16% / 0.78),
+      hsl(220 46% 10% / 0.7)
+    );
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid hsl(213 100% 70% / 0.18);
+  }
+
+  /* Headline gradients */
+  .text-gradient {
+    background: linear-gradient(180deg, #ffffff 0%, #cfe0ff 55%, #6aa8ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-gradient-blue {
+    background: linear-gradient(120deg, #2f8bff 0%, #7cc0ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Faint technical grid backdrop */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, hsl(213 60% 70% / 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(213 60% 70% / 0.06) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .bg-radial-glow {
+    background: radial-gradient(
+      60% 50% at 50% 0%,
+      hsl(213 100% 59% / 0.18) 0%,
+      transparent 70%
+    );
+  }
+
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+  }
+
+  .perspective {
+    perspective: 1200px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+}
+
+/* Respect reduced-motion globally */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
   }
 }
