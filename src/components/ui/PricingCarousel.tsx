@@ -70,9 +70,9 @@ export default function PricingCarousel() {
         ref={trackRef}
         role="list"
         className={cn(
-          "flex snap-x snap-mandatory items-stretch gap-5 overflow-x-auto px-[9%] pb-5 sm:px-[20%]",
+          "flex snap-x snap-mandatory items-start gap-5 overflow-x-auto px-[9%] pb-5 sm:px-[20%]",
           "[scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden",
-          "lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible lg:px-0 lg:pb-0",
+          "lg:grid lg:grid-cols-3 lg:items-stretch lg:gap-6 lg:overflow-visible lg:px-0 lg:pb-0",
         )}
       >
         {PLANS.map((plan, i) => (
