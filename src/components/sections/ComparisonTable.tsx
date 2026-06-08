@@ -31,7 +31,7 @@ export default function ComparisonTable() {
 
         <Reveal delay={0.05}>
           <div className="mx-auto mt-14 max-w-5xl overflow-hidden rounded-2xl border border-white/10">
-            <div className="max-h-[440px] overflow-auto">
+            <div className="max-h-[440px] overflow-auto" data-lenis-prevent>
               <table className="w-full min-w-[640px] border-collapse text-left">
                 <thead className="sticky top-0 z-20">
                   <tr>
