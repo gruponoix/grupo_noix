@@ -2,9 +2,8 @@
 
 import { ArrowUpRight, MessageSquareQuote } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
-import PricingCard from "@/components/ui/PricingCard";
+import PricingCarousel from "@/components/ui/PricingCarousel";
 import { Reveal } from "@/components/ui/Reveal";
-import { PLANS } from "@/lib/pricing";
 
 export default function Pricing() {
   return (
@@ -21,11 +20,7 @@ export default function Pricing() {
           subtitle="Un pago inicial y un mantenimiento mensual que lo cubre todo. Sin permanencias eternas ni sorpresas: eliges según lo que tu negocio necesita vender."
         />
 
-        <div className="mx-auto mt-16 grid max-w-6xl items-stretch gap-6 lg:grid-cols-3">
-          {PLANS.map((plan, i) => (
-            <PricingCard key={plan.id} plan={plan} index={i} />
-          ))}
-        </div>
+        <PricingCarousel />
 
         {/* Custom budget block */}
         <Reveal delay={0.1}>
