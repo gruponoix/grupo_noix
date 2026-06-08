@@ -37,7 +37,7 @@ export default function Hero() {
     <section
       id="top"
       ref={ref}
-      className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-noix-night"
+      className="relative flex min-h-[100svh] items-center justify-center bg-noix-night px-4 pb-20 pt-28 lg:px-0 lg:py-0"
     >
       {/* Backdrop layers */}
       <div className="absolute inset-0 bg-grid opacity-60" aria-hidden />
@@ -144,7 +144,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 0.8 }}
-        className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-white/40 transition-colors hover:text-white/80"
+        className="absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 text-white/40 transition-colors hover:text-white/80 sm:block"
       >
         <ChevronDown className="h-6 w-6 animate-bounce" />
       </motion.a>
