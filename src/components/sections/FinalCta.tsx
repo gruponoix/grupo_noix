@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, ArrowRight } from "lucide-react";
+import { Mail } from "lucide-react";
+import ContactForm from "@/components/sections/ContactForm";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -14,7 +15,7 @@ export default function FinalCta() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8, ease: EASE }}
-          className="relative mx-auto max-w-4xl overflow-hidden rounded-[28px] border border-noix-blue/30 px-6 py-16 text-center sm:px-12 sm:py-20"
+          className="relative mx-auto max-w-3xl overflow-hidden rounded-[28px] border border-noix-blue/30 px-5 py-14 sm:px-12 sm:py-16"
           style={{
             background:
               "radial-gradient(120% 140% at 50% -20%, rgba(47,139,255,0.35) 0%, rgba(19,32,58,0.6) 45%, rgba(10,15,28,0.9) 100%)",
@@ -30,28 +31,25 @@ export default function FinalCta() {
             aria-hidden
           />
 
-          <h2 className="text-balance text-4xl font-black tracking-tightest text-white sm:text-6xl">
-            ¿Empezamos?
-          </h2>
-          <p className="mx-auto mt-5 max-w-xl text-pretty text-base text-white/75 sm:text-lg">
-            Cuéntanos qué hace tu negocio y te diremos, sin compromiso, cómo tu
-            web puede empezar a vender más. Respondemos rápido.
-          </p>
+          <div className="mb-8 text-center">
+            <h2 className="text-balance text-4xl font-black tracking-tightest text-white sm:text-6xl">
+              ¿Empezamos?
+            </h2>
+            <p className="mx-auto mt-5 max-w-xl text-pretty text-base text-white/75 sm:text-lg">
+              Cuéntanos qué hace tu negocio y te diremos, sin compromiso, cómo tu
+              web puede empezar a vender más. Respondemos rápido.
+            </p>
+          </div>
 
-          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="mx-auto max-w-xl">
+            <ContactForm />
+
             <a
-              href="mailto:info@gruponoix.com?subject=Quiero%20una%20web%20que%20venda%20%E2%80%94%20Grupo%20NOIX"
-              className="group inline-flex w-full items-center justify-center gap-2 rounded-lg bg-noix-blue px-7 py-4 text-base font-semibold text-white shadow-glow-lg transition-all hover:bg-[#4a9bff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-noix-night sm:w-auto"
+              href="mailto:gruponoixx@gmail.com?subject=Quiero%20una%20web%20que%20venda%20%E2%80%94%20Grupo%20NOIX"
+              className="mt-5 flex items-center justify-center gap-2 text-sm font-medium text-white/70 transition-colors hover:text-white"
             >
-              <Mail className="h-5 w-5" />
-              Escríbenos
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
-            <a
-              href="mailto:info@gruponoix.com"
-              className="inline-flex items-center gap-2 rounded-lg px-4 py-4 text-base font-medium text-white/80 transition-colors hover:text-white"
-            >
-              info@gruponoix.com
+              <Mail className="h-4 w-4" />
+              o escríbenos a gruponoixx@gmail.com
             </a>
           </div>
         </motion.div>

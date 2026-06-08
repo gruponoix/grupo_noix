@@ -41,7 +41,7 @@ export default function Pricing() {
                 </div>
               </div>
               <a
-                href="mailto:info@gruponoix.com?subject=Presupuesto%20personalizado%20%E2%80%94%20Grupo%20NOIX"
+                href="mailto:gruponoixx@gmail.com?subject=Presupuesto%20personalizado%20%E2%80%94%20Grupo%20NOIX"
                 className="group inline-flex shrink-0 items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition-all hover:border-noix-blue/50 hover:bg-white/[0.08]"
               >
                 Presupuesto personalizado

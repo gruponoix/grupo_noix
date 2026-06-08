@@ -15,7 +15,7 @@ const jsonLd = {
   description:
     "Agencia de desarrollo web para negocios locales. Webs rápidas, móviles y diseñadas para vender.",
   slogan: "No es una web bonita. Es una web que vende.",
-  email: "info@gruponoix.com",
+  email: "gruponoixx@gmail.com",
   url: "https://gruponoix.com",
   areaServed: "ES",
   priceRange: "€€",

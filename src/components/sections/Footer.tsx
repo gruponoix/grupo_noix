@@ -23,11 +23,11 @@ export default function Footer() {
               Desarrollo web para negocios locales que quieren crecer.
             </p>
             <a
-              href="mailto:info@gruponoix.com"
+              href="mailto:gruponoixx@gmail.com"
               className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-noix-blue-soft transition-colors hover:text-white"
             >
               <Mail className="h-4 w-4" />
-              info@gruponoix.com
+              gruponoixx@gmail.com
             </a>
           </div>
 

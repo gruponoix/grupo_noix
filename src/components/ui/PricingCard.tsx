@@ -37,9 +37,12 @@ export default function PricingCard({
     my.set(0);
   }
 
-  const mailto = `mailto:info@gruponoix.com?subject=${encodeURIComponent(
-    `Quiero el plan ${plan.name} — Grupo NOIX`,
-  )}`;
+  // Send the visitor to the contact form and pre-fill it with this plan.
+  function selectPlan() {
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new CustomEvent("noix:plan", { detail: plan.name }));
+    }
+  }
 
   return (
     <motion.div
@@ -54,7 +57,7 @@ export default function PricingCard({
         onMouseLeave={handleLeave}
         style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
         className={cn(
-          "group relative flex h-full flex-col rounded-2xl p-7 transition-shadow duration-300 sm:p-8",
+          "group relative flex h-full flex-col rounded-2xl p-5 transition-shadow duration-300 sm:p-7 lg:p-8",
           featured
             ? "glass-strong shadow-glow-lg ring-1 ring-noix-blue/40"
             : "glass hover:shadow-glow",
@@ -74,7 +77,7 @@ export default function PricingCard({
             className="absolute -top-3 left-1/2 -translate-x-1/2"
             style={{ transform: "translateZ(40px)" }}
           >
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-noix-blue px-3.5 py-1.5 text-xs font-semibold text-white shadow-glow">
+            <span className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-noix-blue px-3 py-1 text-[11px] font-semibold text-white shadow-glow sm:px-3.5 sm:py-1.5 sm:text-xs">
               <Sparkles className="h-3.5 w-3.5" />
               {plan.badge}
             </span>
@@ -82,29 +85,29 @@ export default function PricingCard({
         )}
 
         <div
-          className="flex flex-col gap-2"
+          className="flex flex-col gap-1.5 sm:gap-2"
           style={{ transform: "translateZ(30px)" }}
         >
-          <h3 className="text-2xl font-extrabold tracking-tight text-white">
+          <h3 className="text-xl font-extrabold tracking-tight text-white sm:text-2xl">
             {plan.name}
           </h3>
-          <p className="min-h-[42px] text-sm leading-relaxed text-muted-foreground">
+          <p className="text-[13px] leading-relaxed text-muted-foreground sm:min-h-[42px] sm:text-sm">
             {plan.tagline}
           </p>
         </div>
 
         {/* Price */}
         <div
-          className="mt-6 border-y border-white/10 py-6"
+          className="mt-4 border-y border-white/10 py-4 sm:mt-6 sm:py-6"
           style={{ transform: "translateZ(24px)" }}
         >
           <div className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
             Desde
           </div>
           <div className="mt-1 flex items-baseline gap-1">
-            <span className="text-5xl font-extrabold tracking-tight text-white">
+            <span className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
               {plan.priceFrom}
-              <span className="align-top text-3xl">€</span>
+              <span className="align-top text-2xl sm:text-3xl">€</span>
             </span>
           </div>
           <div className="mt-1 text-sm text-muted-foreground">
@@ -114,13 +117,13 @@ export default function PricingCard({
         </div>
 
         {/* Features */}
-        <div className="mt-6 flex-1">
+        <div className="mt-4 flex-1 sm:mt-6">
           {plan.inherits && (
-            <p className="mb-3 text-sm font-semibold text-white/90">
+            <p className="mb-2.5 text-sm font-semibold text-white/90">
               {plan.inherits}
             </p>
           )}
-          <ul className="space-y-3">
+          <ul className="space-y-2 sm:space-y-3">
             {plan.features.map((f) => (
               <li key={f.label} className="flex items-start gap-3 text-sm">
                 {f.included ? (
@@ -144,12 +147,13 @@ export default function PricingCard({
           </ul>
         </div>
 
-        {/* CTA */}
+        {/* CTA → scrolls to the contact form and pre-fills the plan */}
         <a
-          href={mailto}
+          href="#contacto"
+          onClick={selectPlan}
           style={{ transform: "translateZ(36px)" }}
           className={cn(
-            "mt-8 inline-flex w-full items-center justify-center rounded-lg px-5 py-3.5 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-noix-blue focus-visible:ring-offset-2 focus-visible:ring-offset-noix-night",
+            "mt-6 inline-flex w-full items-center justify-center rounded-lg px-5 py-3 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-noix-blue focus-visible:ring-offset-2 focus-visible:ring-offset-noix-night sm:mt-8 sm:py-3.5",
             featured
               ? "bg-noix-blue text-white shadow-glow hover:bg-[#4a9bff] hover:shadow-glow-lg"
               : "border border-white/15 bg-white/[0.04] text-white hover:border-noix-blue/50 hover:bg-white/[0.08]",
