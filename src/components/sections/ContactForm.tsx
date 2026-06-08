@@ -17,18 +17,17 @@ export default function ContactForm() {
   const [message, setMessage] = useState("");
   const messageRef = useRef<HTMLTextAreaElement>(null);
 
-  // Pre-fill the message when a plan card's CTA is clicked.
+  // Pre-fill the message when a plan card / budget CTA is clicked.
   useEffect(() => {
-    const onPlan = (e: Event) => {
-      const plan = (e as CustomEvent<string>).detail;
-      setMessage(
-        `Hola, me interesa el plan ${plan}. Me gustaría recibir más información.`,
-      );
+    const onPrefill = (e: Event) => {
+      const text = (e as CustomEvent<string>).detail;
+      if (text) setMessage(text);
       // focus after the smooth scroll settles
       window.setTimeout(() => messageRef.current?.focus(), 700);
     };
-    window.addEventListener("noix:plan", onPlan as EventListener);
-    return () => window.removeEventListener("noix:plan", onPlan as EventListener);
+    window.addEventListener("noix:prefill", onPrefill as EventListener);
+    return () =>
+      window.removeEventListener("noix:prefill", onPrefill as EventListener);
   }, []);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {

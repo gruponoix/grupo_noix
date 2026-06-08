@@ -40,7 +40,11 @@ export default function PricingCard({
   // Send the visitor to the contact form and pre-fill it with this plan.
   function selectPlan() {
     if (typeof window !== "undefined") {
-      window.dispatchEvent(new CustomEvent("noix:plan", { detail: plan.name }));
+      window.dispatchEvent(
+        new CustomEvent("noix:prefill", {
+          detail: `Hola, me interesa el plan ${plan.name}. Me gustaría recibir más información.`,
+        }),
+      );
     }
   }
 
