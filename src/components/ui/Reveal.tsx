@@ -1,11 +1,14 @@
 "use client";
 
-import { motion, useReducedMotion, type Variants } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import type { ReactNode } from "react";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
-/** Single scroll-triggered fade-up. */
+/**
+ * Single scroll-triggered fade-up. Reduced motion is honored globally via
+ * <MotionConfig reducedMotion="user"> (the transform snaps; opacity stays).
+ */
 export function Reveal({
   children,
   className,
@@ -17,12 +20,11 @@ export function Reveal({
   delay?: number;
   y?: number;
 }) {
-  const reduce = useReducedMotion();
   return (
     <motion.div
       className={className}
-      initial={reduce ? { opacity: 0 } : { opacity: 0, y }}
-      whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.7, ease: EASE, delay }}
     >
@@ -71,9 +73,8 @@ export function StaggerItem({
   className?: string;
   y?: number;
 }) {
-  const reduce = useReducedMotion();
   const item: Variants = {
-    hidden: reduce ? { opacity: 0 } : { opacity: 0, y },
+    hidden: { opacity: 0, y },
     show: {
       opacity: 1,
       y: 0,

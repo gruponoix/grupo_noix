@@ -1,17 +1,16 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Mail, ArrowRight } from "lucide-react";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 export default function FinalCta() {
-  const reduce = useReducedMotion();
   return (
     <section id="contacto" className="relative scroll-mt-24 px-4 py-24 sm:py-32">
       <div className="container">
         <motion.div
-          initial={reduce ? { opacity: 0 } : { opacity: 0, y: 36 }}
+          initial={{ opacity: 0, y: 36 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8, ease: EASE }}

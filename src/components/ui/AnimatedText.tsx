@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
@@ -8,6 +8,10 @@ const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 /**
  * Headline that reveals word-by-word with a masked slide-up.
  * `highlight` is a list of word indices that receive the blue gradient.
+ *
+ * The markup is identical on server and client; reduced-motion is handled
+ * globally by <MotionConfig reducedMotion="user">, which makes the slide
+ * snap instantly instead of animating.
  */
 export default function AnimatedText({
   text,
@@ -24,21 +28,7 @@ export default function AnimatedText({
   delay?: number;
   stagger?: number;
 }) {
-  const reduce = useReducedMotion();
   const words = text.split(" ");
-
-  if (reduce) {
-    return (
-      <span className={className}>
-        {words.map((w, i) => (
-          <span key={i} className={highlight.includes(i) ? highlightClassName : undefined}>
-            {w}
-            {i < words.length - 1 ? " " : ""}
-          </span>
-        ))}
-      </span>
-    );
-  }
 
   return (
     <span className={cn("inline-block", className)} aria-label={text}>

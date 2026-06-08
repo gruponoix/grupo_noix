@@ -127,7 +127,7 @@ export default function Hero() {
             <motion.li
               key={chip}
               variants={{
-                hidden: reduce ? { opacity: 0 } : { opacity: 0, y: 14 },
+                hidden: { opacity: 0, y: 14 },
                 show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: EASE } },
               }}
             >

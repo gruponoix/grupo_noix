@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Lenis from "lenis";
+import { MotionConfig } from "framer-motion";
 
 /**
  * Global smooth scroll. Disabled automatically when the user prefers
@@ -55,5 +56,8 @@ export default function LenisProvider({
     };
   }, []);
 
-  return <>{children}</>;
+  // reducedMotion="user" lets Framer Motion honor the OS "reduce motion"
+  // setting at runtime WITHOUT changing the server/client markup (which
+  // would break hydration).
+  return <MotionConfig reducedMotion="user">{children}</MotionConfig>;
 }
