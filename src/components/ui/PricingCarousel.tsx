@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import PricingCard from "@/components/ui/PricingCard";
 import { PLANS } from "@/lib/pricing";
 import { cn } from "@/lib/utils";
@@ -65,12 +66,19 @@ export default function PricingCarousel() {
   }, [centerOn]);
 
   return (
-    <div className="mx-auto mt-16 max-w-6xl">
+    <div className="mx-auto mt-12 max-w-6xl sm:mt-16">
+      {/* Swipe hint (mobile / tablet only) */}
+      <div className="mb-4 flex items-center justify-center gap-2 text-xs font-medium text-muted-foreground lg:hidden">
+        <ChevronLeft className="h-4 w-4 text-noix-blue" />
+        Desliza para ver los 3 planes
+        <ChevronRight className="h-4 w-4 text-noix-blue" />
+      </div>
+
       <div
         ref={trackRef}
         role="list"
         className={cn(
-          "flex snap-x snap-mandatory items-start gap-5 overflow-x-auto px-[9%] pb-5 pt-7 sm:px-[20%]",
+          "flex snap-x snap-mandatory items-start gap-4 overflow-x-auto px-[12%] pb-5 pt-7 sm:px-[22%]",
           "[scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden",
           "lg:grid lg:grid-cols-3 lg:items-stretch lg:gap-6 lg:overflow-visible lg:px-0 lg:pb-0 lg:pt-0",
         )}
@@ -83,11 +91,11 @@ export default function PricingCarousel() {
               itemRefs.current[i] = el;
             }}
             className={cn(
-              "min-w-0 shrink-0 basis-[82%] snap-center transition-[transform,opacity] duration-300 ease-out sm:basis-[58%]",
+              "min-w-0 shrink-0 basis-[76%] snap-center transition-[transform,opacity] duration-300 ease-out sm:basis-[54%]",
               "lg:basis-auto lg:shrink lg:!scale-100 lg:!opacity-100",
               i === active
                 ? "scale-100 opacity-100"
-                : "scale-[0.9] opacity-50",
+                : "scale-[0.94] opacity-80",
             )}
           >
             <PricingCard plan={plan} index={i} />
