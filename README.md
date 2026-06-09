@@ -1,3 +1,9 @@
+# Grupo NOIX
+
+> No es una web bonita. Es una web que vende.
+
+Landing de Grupo NOIX, agencia de desarrollo web para negocios locales.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
