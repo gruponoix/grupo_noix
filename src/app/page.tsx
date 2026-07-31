@@ -2,24 +2,46 @@ import Navbar from "@/components/ui/Navbar";
 import Hero from "@/components/sections/Hero";
 import Pricing from "@/components/sections/Pricing";
 import SeoBand from "@/components/sections/SeoBand";
+import Faq from "@/components/sections/Faq";
 import GetStarted from "@/components/sections/GetStarted";
 import Footer from "@/components/sections/Footer";
 import { PLANS, SAAS_OFFER } from "@/lib/pricing";
+import { FAQS } from "@/lib/faq";
 
-const jsonLd = {
+const SITE = "https://gruponoix.com";
+
+const businessLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
+  "@id": `${SITE}/#organization`,
   name: "Grupo NOIX",
+  alternateName: "NOIX",
   description:
-    "Agencia de desarrollo web para negocios locales. Webs rápidas, móviles y diseñadas para vender.",
+    "Agencia de desarrollo web y software. Webs rápidas, móviles y diseñadas para vender para negocios locales, y SaaS a medida para empresas.",
   slogan: "No es una web bonita. Es una web que vende.",
   email: "gruponoixx@gmail.com",
-  url: "https://gruponoix.com",
-  areaServed: "ES",
+  url: SITE,
+  logo: `${SITE}/icon.png`,
+  image: `${SITE}/opengraph-image.png`,
+  areaServed: {
+    "@type": "Country",
+    name: "España",
+  },
+  knowsAbout: [
+    "diseño web",
+    "desarrollo web",
+    "páginas web para negocios locales",
+    "tiendas online",
+    "SEO local",
+    "desarrollo SaaS",
+    "software a medida",
+    "automatización de procesos",
+  ],
+  sameAs: ["https://www.instagram.com/gruponoix/"],
   priceRange: "€€",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Planes de desarrollo web",
+    name: "Planes de desarrollo web y software",
     itemListElement: [
       ...PLANS.map((plan) => ({
         "@type": "Offer",
@@ -39,12 +61,29 @@ const jsonLd = {
   },
 };
 
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: f.a,
+    },
+  })),
+};
+
 export default function Home() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(businessLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
       {/* Cinematic page backdrop */}
       <div
@@ -56,6 +95,7 @@ export default function Home() {
         <Hero />
         <Pricing />
         <SeoBand />
+        <Faq />
         <GetStarted />
       </main>
       <Footer />

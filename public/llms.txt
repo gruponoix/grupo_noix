@@ -1,0 +1,27 @@
+# Grupo NOIX
+
+> Agencia española de desarrollo web y software. Lema: "No es una web bonita. Es una web que vende." Creamos webs rápidas, 100% adaptadas a móvil y orientadas a convertir visitas en clientes para negocios locales, además de SaaS y software a medida para empresas.
+
+Sitio web: https://gruponoix.com
+Contacto: gruponoixx@gmail.com (formulario en https://gruponoix.com/#contacto)
+Idioma: español. Área de servicio: España (trabajo 100% online).
+
+## Servicios y precios (EUR, IVA no incluido; orientativos)
+
+- **Plan Esencial** — desde 290€ + 19€/mes de mantenimiento. Web de hasta 5 secciones, diseño responsive, copywriting orientado a venta, galería, botón de WhatsApp y Google Maps. Ideal para negocios locales que empiezan.
+- **Plan Pro** (recomendado) — desde 790€ + 35€/mes. Todo lo de Esencial más hasta 12 secciones, base de datos de clientes, formularios y captación de correos, embudos de conversión, blog editable e integración con redes sociales.
+- **Plan Premium** — desde 2.190€ + 69€/mes. Todo lo de Pro más panel de gestión, reservas y citas, tienda online completa con pasarela de pago, integraciones CRM/email y soporte prioritario.
+- **SaaS y software a medida (empresas)** — desde 3.500€, según alcance. Aplicaciones SaaS multiusuario, paneles de gestión e informes, automatización de procesos e integraciones con CRM, ERP, APIs y pagos.
+- **SEO local (opcional)** — desde +49€/mes (Esencial) o +89€/mes (Pro/Premium): posicionamiento en Google para búsquedas locales.
+
+## Incluido en todos los planes
+
+Creación completa de la web, dominio propio gestionado y renovado, servidor (hosting) con certificado SSL, copias de seguridad, actualizaciones y soporte. El mantenimiento mensual no incluye SEO.
+
+## Diferenciales
+
+- Webs que cargan en menos de 2 segundos, diseñadas mobile-first.
+- Textos (copywriting) escritos para convertir, no solo para decorar.
+- Entrega en días para los planes de web.
+- Precios cerrados y transparentes, sin permanencias eternas ni letra pequeña.
+- Presupuesto personalizado gratuito y respuesta en menos de 24 horas.
