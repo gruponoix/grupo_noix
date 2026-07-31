@@ -121,3 +121,29 @@ export const INCLUDED: IncludedItem[] = [
     description: "Copias, actualizaciones y soporte para que nunca se caiga.",
   },
 ];
+
+/* ── SaaS / software a medida para empresas ────────────────────── */
+export type SaasIcon = "dashboard" | "users" | "workflow" | "plug";
+
+export interface SaasFeature {
+  icon: SaasIcon;
+  label: string;
+}
+
+export const SAAS_OFFER = {
+  eyebrow: "Para empresas",
+  name: "SaaS y software a medida",
+  tagline:
+    "¿Tu empresa necesita más que una web? Diseñamos y desarrollamos aplicaciones SaaS, paneles internos y herramientas a medida que crecen contigo.",
+  features: [
+    { icon: "users", label: "Aplicaciones SaaS multiusuario" },
+    { icon: "dashboard", label: "Paneles de gestión e informes" },
+    { icon: "workflow", label: "Automatización de procesos" },
+    { icon: "plug", label: "Integraciones: CRM, ERP, APIs y pagos" },
+  ] as SaasFeature[],
+  priceFrom: "3.500",
+  priceNote: "Proyectos a medida · según alcance y fases",
+  cta: "Hablemos de tu proyecto",
+  prefill:
+    "Hola, somos una empresa y nos interesa desarrollar un SaaS / software a medida. Os contamos nuestro proyecto: ",
+};

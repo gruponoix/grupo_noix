@@ -3,6 +3,7 @@
 import { ArrowUpRight, MessageSquareQuote } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import PricingCarousel from "@/components/ui/PricingCarousel";
+import SaasCard from "@/components/ui/SaasCard";
 import { Reveal } from "@/components/ui/Reveal";
 
 export default function Pricing() {
@@ -21,6 +22,9 @@ export default function Pricing() {
         />
 
         <PricingCarousel />
+
+        {/* Enterprise: SaaS / custom software */}
+        <SaasCard />
 
         {/* Custom budget block */}
         <Reveal delay={0.1}>

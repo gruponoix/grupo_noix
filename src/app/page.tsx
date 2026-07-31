@@ -4,7 +4,7 @@ import Pricing from "@/components/sections/Pricing";
 import SeoBand from "@/components/sections/SeoBand";
 import GetStarted from "@/components/sections/GetStarted";
 import Footer from "@/components/sections/Footer";
-import { PLANS } from "@/lib/pricing";
+import { PLANS, SAAS_OFFER } from "@/lib/pricing";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -20,13 +20,22 @@ const jsonLd = {
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Planes de desarrollo web",
-    itemListElement: PLANS.map((plan) => ({
-      "@type": "Offer",
-      name: `Plan ${plan.name}`,
-      description: plan.tagline,
-      price: plan.priceFrom.replace(/\./g, ""),
-      priceCurrency: "EUR",
-    })),
+    itemListElement: [
+      ...PLANS.map((plan) => ({
+        "@type": "Offer",
+        name: `Plan ${plan.name}`,
+        description: plan.tagline,
+        price: plan.priceFrom.replace(/\./g, ""),
+        priceCurrency: "EUR",
+      })),
+      {
+        "@type": "Offer",
+        name: SAAS_OFFER.name,
+        description: SAAS_OFFER.tagline,
+        price: SAAS_OFFER.priceFrom.replace(/\./g, ""),
+        priceCurrency: "EUR",
+      },
+    ],
   },
 };
 
