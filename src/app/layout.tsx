@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import LenisProvider from "@/components/providers/LenisProvider";
 
@@ -73,6 +75,9 @@ export default function RootLayout({
     >
       <body className="bg-noix-night font-sans text-foreground antialiased">
         <LenisProvider>{children}</LenisProvider>
+        {/* Cookieless analytics — no RGPD consent banner required */}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

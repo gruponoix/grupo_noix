@@ -95,8 +95,8 @@ export default function Home() {
         <Hero />
         <Pricing />
         <SeoBand />
-        <Faq />
         <GetStarted />
+        <Faq />
       </main>
       <Footer />
     </>

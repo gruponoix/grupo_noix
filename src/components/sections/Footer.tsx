@@ -1,10 +1,10 @@
-import Logo from "@/components/ui/Logo";
 import EmailButton from "@/components/ui/EmailButton";
 
 const NAV = [
   { label: "Planes", href: "#planes" },
   { label: "SEO", href: "#seo" },
   { label: "Incluido", href: "#incluido" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 export default function Footer() {
@@ -13,7 +13,22 @@ export default function Footer() {
       <div className="container py-16">
         <div className="grid gap-10 md:grid-cols-2">
           <div className="max-w-sm">
-            <Logo className="text-2xl" />
+            <div className="flex items-center gap-2.5">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logo-n.png"
+                alt=""
+                className="h-9 w-auto select-none"
+                draggable={false}
+              />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logo-noix.png"
+                alt="Grupo NOIX"
+                className="h-7 w-auto select-none"
+                draggable={false}
+              />
+            </div>
             <p className="mt-4 text-pretty text-sm text-muted-foreground">
               No es una web bonita.{" "}
               <span className="font-semibold text-white/90">

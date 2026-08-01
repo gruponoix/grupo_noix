@@ -9,6 +9,7 @@ const LINKS = [
   { label: "Planes", href: "#planes" },
   { label: "SEO", href: "#seo" },
   { label: "Incluido", href: "#incluido" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 export default function Navbar() {
