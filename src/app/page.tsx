@@ -23,10 +23,22 @@ const businessLd = {
   url: SITE,
   logo: `${SITE}/icon.png`,
   image: `${SITE}/opengraph-image.png`,
-  areaServed: {
-    "@type": "Country",
-    name: "España",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Málaga",
+    addressRegion: "Andalucía",
+    addressCountry: "ES",
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 36.7213,
+    longitude: -4.4214,
+  },
+  areaServed: [
+    { "@type": "City", name: "Málaga" },
+    { "@type": "AdministrativeArea", name: "Provincia de Málaga" },
+    { "@type": "Country", name: "España" },
+  ],
   knowsAbout: [
     "diseño web",
     "desarrollo web",

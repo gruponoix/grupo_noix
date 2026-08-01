@@ -29,7 +29,7 @@ export const FAQS: FaqItem[] = [
     a: "Las dos cosas. Además de webs para negocios locales, desarrollamos SaaS y software a medida para empresas desde 3.500€: aplicaciones multiusuario, paneles de gestión, automatización de procesos e integraciones con CRM, ERP, APIs y pasarelas de pago.",
   },
   {
-    q: "¿Trabajáis con negocios de cualquier ciudad?",
-    a: "Sí. Trabajamos 100% online con negocios de toda España: reuniones por videollamada, entregas y soporte a distancia. Escríbenos a gruponoixx@gmail.com o desde el formulario y te respondemos en menos de 24 horas.",
+    q: "¿Dónde estáis y con qué ciudades trabajáis?",
+    a: "Somos una agencia de desarrollo web con base en Málaga. Atendemos en persona a negocios de Málaga y provincia, y trabajamos 100% online con clientes de toda España: reuniones por videollamada, entregas y soporte a distancia. Escríbenos a gruponoixx@gmail.com o desde el formulario y te respondemos en menos de 24 horas.",
   },
 ];

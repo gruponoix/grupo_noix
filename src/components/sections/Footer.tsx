@@ -34,7 +34,7 @@ export default function Footer() {
               <span className="font-semibold text-white/90">
                 Es una web que vende.
               </span>{" "}
-              Desarrollo web para negocios locales que quieren crecer.
+              Diseño y desarrollo web en <strong className="font-semibold text-white/90">Málaga</strong>, para negocios locales de toda España.
             </p>
             <EmailButton
               email="gruponoixx@gmail.com"
