@@ -1,10 +1,12 @@
 import Navbar from "@/components/ui/Navbar";
 import Hero from "@/components/sections/Hero";
+import Portfolio from "@/components/sections/Portfolio";
 import Pricing from "@/components/sections/Pricing";
 import SeoBand from "@/components/sections/SeoBand";
 import Faq from "@/components/sections/Faq";
 import GetStarted from "@/components/sections/GetStarted";
 import Footer from "@/components/sections/Footer";
+import FloatingCta from "@/components/ui/FloatingCta";
 import { PLANS, SAAS_OFFER } from "@/lib/pricing";
 import { FAQS } from "@/lib/faq";
 
@@ -105,12 +107,14 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <Portfolio />
         <Pricing />
         <SeoBand />
         <GetStarted />
         <Faq />
       </main>
       <Footer />
+      <FloatingCta />
     </>
   );
 }

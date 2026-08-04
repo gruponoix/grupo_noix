@@ -37,3 +37,6 @@ next-env.d.ts
 
 # Marketing assets (not part of the app)
 /instagram
+
+# Capturas de origen (no forman parte de la app)
+/capturas

@@ -6,9 +6,9 @@ import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const LINKS = [
+  { label: "Proyectos", href: "#proyectos" },
   { label: "Planes", href: "#planes" },
   { label: "SEO", href: "#seo" },
-  { label: "Incluido", href: "#incluido" },
   { label: "FAQ", href: "#faq" },
 ];
 

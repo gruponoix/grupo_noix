@@ -4,6 +4,8 @@ import { Rocket, Globe, ShieldCheck, Wrench, type LucideIcon } from "lucide-reac
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import ContactForm from "@/components/sections/ContactForm";
 import EmailButton from "@/components/ui/EmailButton";
+import WhatsappIcon from "@/components/ui/WhatsappIcon";
+import { whatsappLink } from "@/lib/whatsapp";
 import { INCLUDED, type IncludedIcon } from "@/lib/pricing";
 
 const ICONS: Record<IncludedIcon, LucideIcon> = {
@@ -92,10 +94,29 @@ export default function GetStarted() {
 
               <ContactForm />
 
+              {/* Alternative contact channels */}
+              <div className="mt-5 flex items-center gap-3">
+                <span className="h-px flex-1 bg-white/10" />
+                <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
+                  o si lo prefieres
+                </span>
+                <span className="h-px flex-1 bg-white/10" />
+              </div>
+
+              <a
+                href={whatsappLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 flex w-full items-center justify-center gap-2.5 rounded-lg bg-[#25D366] px-5 py-3 text-sm font-semibold text-white transition-all hover:bg-[#1fbb59] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-noix-night"
+              >
+                <WhatsappIcon className="h-5 w-5" />
+                Escríbenos por WhatsApp
+              </a>
+
               <EmailButton
                 email="gruponoixx@gmail.com"
                 subject="Quiero una web que venda — Grupo NOIX"
-                label="o escríbenos a gruponoixx@gmail.com"
+                label="o por correo: gruponoixx@gmail.com"
                 className="mt-4 flex items-center justify-center gap-2 text-sm font-medium text-white/70 transition-colors hover:text-white"
               />
             </div>
