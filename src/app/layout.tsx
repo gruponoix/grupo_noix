@@ -16,7 +16,7 @@ const SITE_URL = "https://gruponoix.com";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Grupo NOIX — No es una web bonita. Es una web que vende.",
+    default: "Grupo NOIX — Soluciones digitales para negocios que quieren crecer.",
     template: "%s · Grupo NOIX",
   },
   description:
@@ -42,15 +42,15 @@ export const metadata: Metadata = {
     locale: "es_ES",
     url: SITE_URL,
     siteName: "Grupo NOIX",
-    title: "Grupo NOIX — No es una web bonita. Es una web que vende.",
+    title: "Grupo NOIX — Soluciones digitales para negocios que quieren crecer.",
     description:
-      "Webs rápidas, móviles y pensadas para vender, para negocios locales. Planes desde 290€.",
+      "Webs, aplicaciones y software a medida para negocios y empresas que quieren crecer. Webs desde 290€.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Grupo NOIX — No es una web bonita. Es una web que vende.",
+    title: "Grupo NOIX — Soluciones digitales para negocios que quieren crecer.",
     description:
-      "Webs rápidas, móviles y pensadas para vender, para negocios locales. Planes desde 290€.",
+      "Webs, aplicaciones y software a medida para negocios y empresas que quieren crecer. Webs desde 290€.",
   },
   robots: {
     index: true,

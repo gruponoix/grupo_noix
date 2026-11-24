@@ -1,6 +1,6 @@
 # Grupo NOIX
 
-> Agencia española de desarrollo web y software. Lema: "No es una web bonita. Es una web que vende." Creamos webs rápidas, 100% adaptadas a móvil y orientadas a convertir visitas en clientes para negocios locales, además de SaaS y software a medida para empresas.
+> Agencia española de desarrollo web y software. Lema: "Soluciones digitales para negocios que quieren crecer." Creamos webs rápidas, 100% adaptadas a móvil y orientadas a convertir visitas en clientes para negocios locales, además de SaaS y software a medida para empresas.
 
 Sitio web: https://gruponoix.com
 Contacto: gruponoixx@gmail.com (formulario en https://gruponoix.com/#contacto)

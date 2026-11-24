@@ -20,7 +20,7 @@ const businessLd = {
   alternateName: "NOIX",
   description:
     "Agencia de desarrollo web y software. Webs rápidas, móviles y diseñadas para vender para negocios locales, y SaaS a medida para empresas.",
-  slogan: "No es una web bonita. Es una web que vende.",
+  slogan: "Soluciones digitales para negocios que quieren crecer.",
   email: "gruponoixx@gmail.com",
   url: SITE,
   logo: `${SITE}/icon.png`,

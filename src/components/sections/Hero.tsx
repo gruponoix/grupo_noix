@@ -64,17 +64,17 @@ export default function Hero() {
           transition={{ duration: 0.7, ease: EASE }}
         >
           <Chip className="mb-7">
-            Agencia de desarrollo web · negocios locales
+            Desarrollo web y software · Málaga
           </Chip>
         </motion.div>
 
         <h1 className="text-balance text-4xl font-black leading-[0.98] tracking-tightest text-white sm:text-6xl lg:text-7xl xl:text-[5.25rem]">
           <span className="block">
-            <AnimatedText text="No es una web bonita." delay={0.25} />
+            <AnimatedText text="Soluciones digitales" delay={0.25} />
           </span>
           <span className="mt-1 block text-gradient">
             <AnimatedText
-              text="Es una web que vende."
+              text="para negocios que quieren crecer."
               delay={0.6}
               highlight={[4]}
               highlightClassName="text-gradient-blue"
@@ -88,9 +88,9 @@ export default function Hero() {
           transition={{ duration: 0.7, ease: EASE, delay: 1.1 }}
           className="mt-7 max-w-2xl text-pretty text-base text-white/70 sm:text-lg"
         >
-          Diseñamos y desarrollamos webs rápidas, impecables en el móvil y
-          pensadas para una sola cosa: convertir visitas en clientes para tu
-          negocio local.
+          Diseñamos y desarrollamos webs, aplicaciones y software a medida que
+          impulsan las ventas, optimizan procesos y acompañan el crecimiento de
+          tu empresa.
         </motion.p>
 
         <motion.div

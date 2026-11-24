@@ -31,9 +31,9 @@ export default function Footer() {
               />
             </div>
             <p className="mt-4 text-pretty text-sm text-muted-foreground">
-              No es una web bonita.{" "}
+              Soluciones digitales{" "}
               <span className="font-semibold text-white/90">
-                Es una web que vende.
+                para negocios que quieren crecer.
               </span>{" "}
               Diseño y desarrollo web en <strong className="font-semibold text-white/90">Málaga</strong>, para negocios locales de toda España.
             </p>

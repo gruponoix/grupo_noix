@@ -62,7 +62,7 @@ export function buildContactEmail(p: ContactPayload) {
           <a href="mailto:${email}" style="display:inline-block;background:#2f8bff;color:#ffffff;text-decoration:none;font-weight:700;font-size:14px;padding:13px 24px;border-radius:10px;font-family:Helvetica,Arial,sans-serif;">Responder a ${name}</a>
         </td></tr>
         <tr><td style="padding:18px 32px;background:#0a0f1c;border-top:1px solid #1e2d4d;">
-          <p style="margin:0;font-size:11px;line-height:1.6;color:#5d7298;font-family:Helvetica,Arial,sans-serif;">Enviado el ${date} · Grupo NOIX — No es una web bonita. Es una web que vende.</p>
+          <p style="margin:0;font-size:11px;line-height:1.6;color:#5d7298;font-family:Helvetica,Arial,sans-serif;">Enviado el ${date} · Grupo NOIX — Soluciones digitales para negocios que quieren crecer.</p>
         </td></tr>
       </table>
     </td></tr>
