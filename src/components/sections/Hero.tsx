@@ -64,7 +64,7 @@ export default function Hero() {
           transition={{ duration: 0.7, ease: EASE }}
         >
           <Chip className="mb-7">
-            Desarrollo web y software · Málaga
+            Desarrollo web y software
           </Chip>
         </motion.div>
 
