@@ -26,7 +26,7 @@ export const FAQS: FaqItem[] = [
   },
   {
     q: "¿Desarrolláis aplicaciones y SaaS o solo páginas web?",
-    a: "Las dos cosas. Además de webs para negocios locales, desarrollamos SaaS y software a medida para empresas desde 3.500€: aplicaciones multiusuario, paneles de gestión, automatización de procesos e integraciones con CRM, ERP, APIs y pasarelas de pago.",
+    a: "Las dos cosas. Además de webs para negocios locales, desarrollamos SaaS y software a medida para empresas desde 3.000€ (+ mantenimiento desde 100€/mes): aplicaciones multiusuario, paneles de gestión, automatización de procesos e integraciones con CRM, ERP, APIs y pasarelas de pago.",
   },
   {
     q: "¿Dónde estáis y con qué ciudades trabajáis?",

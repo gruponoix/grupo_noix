@@ -107,9 +107,9 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Portfolio />
         <Pricing />
         <SeoBand />
+        <Portfolio />
         <GetStarted />
         <Faq />
       </main>

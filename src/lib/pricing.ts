@@ -141,7 +141,8 @@ export const SAAS_OFFER = {
     { icon: "workflow", label: "Automatización de procesos" },
     { icon: "plug", label: "Integraciones: CRM, ERP, APIs y pagos" },
   ] as SaasFeature[],
-  priceFrom: "3.500",
+  priceFrom: "3.000",
+  monthlyFrom: "100",
   priceNote: "Proyectos a medida · según alcance y fases",
   cta: "Hablemos de tu proyecto",
   prefill:

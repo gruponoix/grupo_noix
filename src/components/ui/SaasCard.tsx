@@ -100,6 +100,13 @@ export default function SaasCard() {
                 {SAAS_OFFER.priceFrom}
                 <span className="align-top text-2xl">€</span>
               </div>
+              <div className="mt-1 text-sm text-muted-foreground">
+                + desde{" "}
+                <span className="font-semibold text-noix-blue-soft">
+                  {SAAS_OFFER.monthlyFrom}€
+                </span>{" "}
+                / mes de mantenimiento
+              </div>
               <p className="mt-1.5 text-xs text-muted-foreground">
                 {SAAS_OFFER.priceNote}
               </p>
