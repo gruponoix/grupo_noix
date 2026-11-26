@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s · Grupo NOIX",
   },
   description:
-    "Agencia de diseño y desarrollo web en Málaga para negocios locales. Webs rápidas, 100% móviles y diseñadas para convertir visitas en clientes, y SaaS a medida. Desde 290€.",
+    "Desarrollo web y software a medida para negocios y empresas de toda España. Webs que venden, aplicaciones y SaaS que hacen crecer tu empresa. Webs desde 290€.",
   keywords: [
     "diseño web Málaga",
     "páginas web Málaga",
@@ -44,13 +44,13 @@ export const metadata: Metadata = {
     siteName: "Grupo NOIX",
     title: "Grupo NOIX — Soluciones digitales para negocios que quieren crecer.",
     description:
-      "Webs, aplicaciones y software a medida para negocios y empresas que quieren crecer. Webs desde 290€.",
+      "Desarrollo web y software a medida para negocios y empresas de toda España. Webs que venden, aplicaciones y SaaS que hacen crecer tu empresa. Webs desde 290€.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Grupo NOIX — Soluciones digitales para negocios que quieren crecer.",
     description:
-      "Webs, aplicaciones y software a medida para negocios y empresas que quieren crecer. Webs desde 290€.",
+      "Desarrollo web y software a medida para negocios y empresas de toda España. Webs que venden, aplicaciones y SaaS que hacen crecer tu empresa. Webs desde 290€.",
   },
   robots: {
     index: true,

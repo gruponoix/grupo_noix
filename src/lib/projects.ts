@@ -72,17 +72,17 @@ export const PROJECTS: Project[] = [
     mobile: "/portfolio/movil/arcadia.jpg",
   },
   {
-    slug: "keitel",
-    name: "Keitel Revenue",
+    slug: "kietel",
+    name: "Kietel Revenue",
     sector: "Consultoría hotelera · Málaga",
     description:
       "Web corporativa premium con servicios, casos de éxito y blog, orientada a captar diagnósticos de hoteles.",
     tags: ["Web", "Contenido", "Captación"],
     objective: "Diagnósticos solicitados por hoteles",
-    image: "/portfolio/keitel.jpg",
+    image: "/portfolio/kietel.jpg",
     width: 1200,
-    height: 9750,
-    mobile: "/portfolio/movil/keitel.jpg",
+    height: 4962,
+    mobile: "/portfolio/movil/kietel.jpg",
   },
   {
     slug: "onlygusto",
